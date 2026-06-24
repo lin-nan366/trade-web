@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 20% 98%;
+    --foreground: 218 18% 16%;
+    --card: 0 0% 100%;
+    --card-foreground: 218 18% 16%;
+    --primary: 218 24% 18%;
+    --primary-foreground: 210 24% 98%;
+    --secondary: 204 28% 92%;
+    --secondary-foreground: 218 18% 18%;
+    --muted: 206 24% 94%;
+    --muted-foreground: 215 10% 42%;
+    --accent: 168 30% 90%;
+    --accent-foreground: 170 45% 18%;
+    --destructive: 0 78% 58%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 210 18% 86%;
+    --input: 210 18% 86%;
+    --ring: 180 52% 34%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 220 18% 9%;
+    --foreground: 210 22% 94%;
+    --card: 220 16% 13%;
+    --card-foreground: 210 22% 94%;
+    --primary: 178 54% 45%;
+    --primary-foreground: 220 20% 8%;
+    --secondary: 217 18% 18%;
+    --secondary-foreground: 210 20% 94%;
+    --muted: 218 16% 19%;
+    --muted-foreground: 214 12% 67%;
+    --accent: 177 24% 19%;
+    --accent-foreground: 176 56% 78%;
+    --destructive: 0 68% 52%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 218 16% 24%;
+    --input: 218 16% 24%;
+    --ring: 178 54% 45%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    color-scheme: light;
+  }
+
+  html.dark {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+
+  button,
+  input,
+  select,
+  textarea {
+    font: inherit;
+  }
+}
+
+@layer utilities {
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--border)) transparent;
+  }
+}
